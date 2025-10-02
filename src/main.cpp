@@ -21,8 +21,8 @@ int main() {
 
 	//все что выше не трогать, это инициализация движка
 
-    Entity earth("Earth", "assets/objects/SpaceItem/Planets/Earth_1_12756.glb");
-    earth.set_scale(glm::vec3(1.0F));
+    Entity earth("Earth", "assets/objects/SpaceItems/Earth_1_12756.glb");
+    earth.set_scale(glm::vec3(0.3F));
     Scene::createEntity(earth);
 
 	//где то тут можешь делать все что угодно, например создавать энтити и добавлять их в сцену
