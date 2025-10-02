@@ -1,0 +1,18 @@
+/out/build/x64-Debug
+/.vs
+/.vs/CallOfISS
+/.vs/CallOfISS/CopilotIndices/17.14.1091.29919
+/.vs/CallOfISS/FileContentIndex
+/.vs/CallOfISS/v17
+/.vs/CMake Overview
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
+/.vs/slnx.sqlite-journal
+/.vs/VSWorkspaceState.json
+/out/build/x64-Release/_deps
+/out/build/x64-Release/lib
+/out/build/x64-Release/glad_cmake
+/out/build/x64-Release/gladsources
+/out/build/x64-Release/Testing
+/out/build/x64-Release/CMakeFiles
+/out/build/x64-Release/.cmake

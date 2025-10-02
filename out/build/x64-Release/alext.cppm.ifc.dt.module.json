@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "alext.obj",
+            "outputs": [
+                "C:\\Users\\illia\\Downloads\\test\\CallOfISS\\vc140.pdb",
+                "C:\\Users\\illia\\Downloads\\test\\CallOfISS\\out\\build\\x64-Release\\alext.cppm.ifc.dt.module.json",
+                "C:\\Users\\illia\\Downloads\\test\\CallOfISS\\out\\build\\x64-Release\\alext.cppm.ifc.dt.d.json",
+                "C:\\Users\\illia\\Downloads\\test\\CallOfISS\\out\\build\\x64-Release\\openal.ext.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "openal.ext",
+                    "source-path": "c:\\users\\illia\\downloads\\test\\callofiss\\out\\build\\x64-release\\_deps\\openal-soft-src\\modules\\alext.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "openal.efx"
+                },
+                {
+                    "logical-name": "openal.std"
+                }
+            ]
+        }
+    ]
+}

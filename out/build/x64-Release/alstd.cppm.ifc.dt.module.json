@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "alstd.obj",
+            "outputs": [
+                "C:\\Users\\illia\\Downloads\\test\\CallOfISS\\vc140.pdb",
+                "C:\\Users\\illia\\Downloads\\test\\CallOfISS\\out\\build\\x64-Release\\alstd.cppm.ifc.dt.module.json",
+                "C:\\Users\\illia\\Downloads\\test\\CallOfISS\\out\\build\\x64-Release\\alstd.cppm.ifc.dt.d.json",
+                "C:\\Users\\illia\\Downloads\\test\\CallOfISS\\out\\build\\x64-Release\\openal.std.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "openal.std",
+                    "source-path": "c:\\users\\illia\\downloads\\test\\callofiss\\out\\build\\x64-release\\_deps\\openal-soft-src\\modules\\alstd.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "openal.alc"
+                },
+                {
+                    "logical-name": "openal.al"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\illia\\downloads\\test\\callofiss\\out\\build\\x64-release\\_deps\\openal-soft-src\\modules\\openal.cppm",
+        "ProvidedModule": "openal",
+        "Includes": [],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
