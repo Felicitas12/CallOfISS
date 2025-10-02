@@ -1,9 +1,0 @@
-width: 1920
-height: 1080
-fullscreen: false
-vsync: false
-bloom: true
-shadowQuality: 2
-bufferQuality: 2
-textureQuality: 2
-exposure: 1
