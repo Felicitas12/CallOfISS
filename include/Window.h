@@ -12,6 +12,8 @@ struct WindowData
 	int height;
 	float aspectRatio;
 	bool vsync;
+	bool fullscreen;
+
 };
 
 class Window

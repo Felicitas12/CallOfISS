@@ -19,11 +19,12 @@ int main() {
 
 	//все что выше не трогать, это инициализация движка
 
-    Entity map("map", "assets/objects/sponzaAtrium/Sponza.gltf");
+    Entity map("map", "assets/objects/Sun_1_1391000.usdz");
     map.set_scale(glm::vec3(5.15F));
     auto mapUUID = UUID();
-    //map.make_collision(mapUUID, "assets/objects/sponzaAtrium/Sponza.gltf",  true); <-- созадает детальную коллизию, по которой можно например ходить
-    Scene::createEntityWithUUID(mapUUID, map); 
+    //map.make_collision(mapUUID, "assets/objects/sponzaAtrium/Sponza.gltf",  true);
+    Scene::createEntityWithUUID(mapUUID, map);
+
 
 	//где то тут можешь делать все что угодно, например создавать энтити и добавлять их в сцену
     
