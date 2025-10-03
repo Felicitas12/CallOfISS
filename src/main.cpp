@@ -4,6 +4,8 @@
 #include <Entity.h>
 #include <UUID.h>
 #include <Scene.h>
+#include <glm/glm.hpp>
+#include <glm/vec3.hpp>
 
 
 int main() {
@@ -19,11 +21,9 @@ int main() {
 
 	//все что выше не трогать, это инициализация движка
 
-    Entity map("map", "assets/objects/sponzaAtrium/Sponza.gltf");
-    map.set_scale(glm::vec3(5.15F));
-    auto mapUUID = UUID();
-    //map.make_collision(mapUUID, "assets/objects/sponzaAtrium/Sponza.gltf",  true); <-- созадает детальную коллизию, по которой можно например ходить
-    Scene::createEntityWithUUID(mapUUID, map); 
+    Entity earth("Earth", "assets/objects/SpaceItems/Earth_1_12756.glb");
+    earth.set_scale(glm::vec3(0.3F));
+    Scene::createEntity(earth);
 
 	//где то тут можешь делать все что угодно, например создавать энтити и добавлять их в сцену
     
