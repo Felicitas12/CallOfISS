@@ -3,7 +3,7 @@ project(CallOfISS)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(CallOfISS src/main.cpp)
+add_executable(CallOfISS src/main.cpp "src/constants.h" "src/constants.cpp")
 
 
 
