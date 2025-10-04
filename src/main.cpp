@@ -36,8 +36,8 @@ int main() {
     Scene::createEntityWithUUID(sunUUID, sun);
 
     Entity iss("ISS", "assets/objects/SpaceItems/ISS_stationary.glb");
-    iss.set_scale(glm::vec3(20.0F));
-    iss.set_position(glm::vec3(-1000.0F, -1000.0F, 0.0F));
+    iss.set_scale(glm::vec3(10.0F));
+    iss.set_position(glm::vec3(-700.0F, 0.0F, -700.0F));
     auto issUUID = UUID();
 
     Scene::createEntityWithUUID(issUUID, iss);
@@ -45,7 +45,7 @@ int main() {
     Entity earth("Earth", "assets/objects/SpaceItems/Earth_1_12756.glb");
     auto earthUUID = UUID();
     earth.set_scale(glm::vec3(0.3F));
-	earth.set_position(glm::vec3(500.0F, 500.0F, 0.0F));
+	earth.set_position(glm::vec3(500.0F, 0.0F, 500.0F));
     //earth.set_rotation(earthAxisTilted, glm::radians(360.0f));
     auto earth_uuid = UUID();
 
