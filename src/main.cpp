@@ -1,14 +1,24 @@
+// Engine imports
 #include <Engine.h>
 #include <iostream>
 #include <Window.h>
 #include <Entity.h>
 #include <UUID.h>
 #include <Scene.h>
-#include <glm/glm.hpp>
-#include <glm/vec3.hpp>
 
+// Other stuff
+#include <string>
+#include <glm/ext/quaternion_trigonometric.hpp>
+#include "constants.h"
 
 int main() {
+    // Constants and variables zone
+    constexpr float fullPi = glm::pi<float>();
+
+    float earthAxis = glm::radians(earthDefaultAxis);
+    glm::vec3 axisFull(0.0f, 0.0f, 1.0f);
+    glm::vec3 earthAxisTilted = glm::normalize(glm::vec3(0.0f, glm::sin(glm::radians(earthDefaultAxis)), glm::cos(glm::radians(earthDefaultAxis))));
+    glm::quat earthAngle = glm::angleAxis(earthAxis, earthAxisTilted);
 
     Engine::Initialize();
 
@@ -19,27 +29,42 @@ int main() {
 
     Engine::InputInitialize();
 
-	//все что выше не трогать, это инициализация движка
+	Entity sun("Sun", "assets/objects/SpaceItems/sun.glb");
+    sun.set_scale(glm::vec3(20.0F));
+    auto sunUUID = UUID();
+    sun.set_rotation(axisFull, sunDefaultAxis);
+    Scene::createEntityWithUUID(sunUUID, sun);
+
+    Entity iss("ISS", "assets/objects/SpaceItems/ISS_stationary.glb");
+    iss.set_scale(glm::vec3(20.0F));
+    iss.set_position(glm::vec3(-1000.0F, -1000.0F, 0.0F));
+    auto issUUID = UUID();
+
+    Scene::createEntityWithUUID(issUUID, iss);
 
     Entity earth("Earth", "assets/objects/SpaceItems/Earth_1_12756.glb");
+    auto earthUUID = UUID();
     earth.set_scale(glm::vec3(0.3F));
-    Scene::createEntity(earth);
+	earth.set_position(glm::vec3(500.0F, 500.0F, 0.0F));
+    //earth.set_rotation(earthAxisTilted, glm::radians(360.0f));
+    auto earth_uuid = UUID();
 
-	//где то тут можешь делать все что угодно, например создавать энтити и добавлять их в сцену
-    
+	Scene::createEntityWithUUID(earth_uuid, earth);
+   
     while (!Window::ShouldClose())
     {
-        // до тик инпута
-        Engine::Tick(); //тут небольшой просак, потом разделю тик
-        // после прохода отрисовки
+        auto& eartsh = Scene::getEntity(earth_uuid);
+        eartsh.set_rotation(earthAxisTilted, earthAxis);
 
-        
+        /*eartsh.set_rotation(glm::vec3(0.0f, 1.0f, 0.0f), glm::radians(1.0f));*/
+        // Render::getLightSources().set_directional_light(0, glm::normalize(-earth_pos), glm::vec3{ 6.0f });
+        // берем сущевствующий свет и меняем его направленность
 
-		Window::SwapBuffers();//конец кадра
+        // Render::getLightSources().send_changes(); отправляем все изменения с освещением в шейдеры
+        Engine::Tick();
+		Window::SwapBuffers();
     }
     Engine::Clear();
-
-    // сотреш потом комменты
 
     return 0;
 }
