@@ -22,7 +22,7 @@ int main() {
 
     Engine::Initialize();
 
-	/*SceneSerializer ss; // загружает сцену из файла, но ее пока шо нет
+    /*SceneSerializer ss; // Г§Г ГЈГ°ГіГ¦Г ГҐГІ Г±Г¶ГҐГ­Гі ГЁГ§ ГґГ Г©Г«Г , Г­Г® ГҐГҐ ГЇГ®ГЄГ  ГёГ® Г­ГҐГІ
      ss.Deserialize("scene.yaml");*/
 
     Engine::GetRender().init_buffers(Window::GetWindowWidth(), Window::GetWindowHeight());
@@ -58,9 +58,9 @@ int main() {
 
         /*eartsh.set_rotation(glm::vec3(0.0f, 1.0f, 0.0f), glm::radians(1.0f));*/
         // Render::getLightSources().set_directional_light(0, glm::normalize(-earth_pos), glm::vec3{ 6.0f });
-        // берем сущевствующий свет и меняем его направленность
+        // ГЎГҐГ°ГҐГ¬ Г±ГіГ№ГҐГўГ±ГІГўГіГѕГ№ГЁГ© Г±ГўГҐГІ ГЁ Г¬ГҐГ­ГїГҐГ¬ ГҐГЈГ® Г­Г ГЇГ°Г ГўГ«ГҐГ­Г­Г®Г±ГІГј
 
-        // Render::getLightSources().send_changes(); отправляем все изменения с освещением в шейдеры
+        // Render::getLightSources().send_changes(); Г®ГІГЇГ°Г ГўГ«ГїГҐГ¬ ГўГ±ГҐ ГЁГ§Г¬ГҐГ­ГҐГ­ГЁГї Г± Г®Г±ГўГҐГ№ГҐГ­ГЁГҐГ¬ Гў ГёГҐГ©Г¤ГҐГ°Г»
         Engine::Tick();
 		Window::SwapBuffers();
     }

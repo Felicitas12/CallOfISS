@@ -4,12 +4,11 @@
 #include <glad/gl.h>
 #include "Export.h"
 #include <glm/mat4x4.hpp>
-
+#include "LightSources.h"
 class Model;
 class GUIHandler;
 class GUITexture;
 
-class LightSources;
 class PlayerController;
 
 class BulletDebugDrawer;
@@ -45,6 +44,7 @@ public:
 	static unsigned int get_viewport_renderbuffer_ID();
 
 
+	ENGINE_API static LightSources& getLightSources();
 
 };
 
